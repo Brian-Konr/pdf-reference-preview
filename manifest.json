@@ -1,0 +1,48 @@
+{
+    "manifest_version": 3,
+    "name": "PDF Hover Preview",
+    "version": "1.0",
+    "description": "Shows previews of referenced paper titles on hover within PDFs.",
+    "permissions": [
+        "activeTab",
+        "webRequest",
+        "storage",
+        "declarativeNetRequest"
+    ],
+    "host_permissions": [
+        "https://*.arxiv.org/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "id": "1",
+                "enabled": true,
+                "path": "intercept_urls.json"
+            }
+        ]
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "viewer.html",
+                "lib/pdfjs/*",
+                "images/*"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/icon_16.png",
+            "32": "images/icon_32.png",
+            "48": "images/icon_48.png",
+            "128": "images/icon_128.png"
+        }
+    }
+}

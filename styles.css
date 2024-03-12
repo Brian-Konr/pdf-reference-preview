@@ -1,0 +1,36 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.pdf-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+canvas {
+    display: block;
+    /* Each canvas on a new line */
+    margin: 10px auto;
+    /* Adds some space between the pages and centers them horizontally */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Adds a subtle shadow for better visibility */
+    background: #fff;
+    /* Ensure that canvas has a white background */
+    border-radius: 4px;
+    /* Optional: adds rounded corners for a smoother look */
+}
+
+@media screen and (max-width: 768px) {
+    canvas {
+        width: 90vw;
+        /* Adjust the canvas width on smaller screens */
+        height: auto;
+    }
+}

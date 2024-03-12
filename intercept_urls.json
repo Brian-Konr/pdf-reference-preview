@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "priority": 1,
+        "action": {
+            "type": "redirect",
+            "redirect": { "url": "chrome-extension://mjccofjapanggpdfemjkpimcgoocblgn/viewer.html" }
+        },
+        "condition": {
+            "urlFilter": "*.pdf",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame"
+            ]
+        }
+    }
+]
