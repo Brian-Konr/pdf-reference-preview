@@ -4,6 +4,25 @@ body {
     background: #f4f4f4;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main-title {
+    font-size: 2.5rem;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 20px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
 }
 
 .pdf-container {
@@ -11,26 +30,54 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    margin-top: 20px;
+    margin: 20px;
+    flex: 1;
+}
+
+.side-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    /* Adjust based on your preference */
+    height: 100px;
+    /* Adjust based on your preference */
+    margin: 0 20px;
+    background-color: #ddd;
+    /* Placeholder for images */
+}
+
+.left-image {
+    background-image: url('path/to/your/left-image.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.right-image {
+    background-image: url('path/to/your/right-image.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 canvas {
     display: block;
-    /* Each canvas on a new line */
     margin: 10px auto;
-    /* Adds some space between the pages and centers them horizontally */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Adds a subtle shadow for better visibility */
     background: #fff;
-    /* Ensure that canvas has a white background */
     border-radius: 4px;
-    /* Optional: adds rounded corners for a smoother look */
 }
 
 @media screen and (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .side-image {
+        margin: 10px 0;
+    }
+
     canvas {
         width: 90vw;
-        /* Adjust the canvas width on smaller screens */
         height: auto;
     }
 }
