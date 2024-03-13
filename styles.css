@@ -81,3 +81,22 @@ canvas {
         height: auto;
     }
 }
+
+.textLayer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: transparent;
+    pointer-events: none;
+    overflow: hidden;
+    line-height: 1;
+    font-size: 10px;
+    /* Adjust as necessary to match the PDF's text size */
+}
+
+/* Make sure canvas has position relative to position the textLayer absolutely within it */
+#the-canvas {
+    position: relative;
+    border: 1px solid black;
+    direction: ltr;
+}

@@ -10,14 +10,13 @@
 
 <body>
     <h1 id="main-title">😎Brian Konr's Awesome PDF Reader😎</h1>
+    <div id="pdf-navigation">
+        <button id="prev" class="nav-button">Previous</button>
+        <span id="page-info">Page <span id="page-num">-</span> of <span id="page-count">-</span></span>
+        <button id="next" class="nav-button">Next</button>
+    </div>
     <div class="content-wrapper">
-        <div class="side-image left-image">
-            <img src="images/icon_128.png" alt="Left Side Image">
-        </div>
         <div id="pdf-render" class="pdf-container"></div>
-        <div class="side-image right-image">
-            <img src="images/icon_128.png" alt="Right Side Image">
-        </div>
     </div>
     <script type="module" src="viewer.js"></script>
 </body>
